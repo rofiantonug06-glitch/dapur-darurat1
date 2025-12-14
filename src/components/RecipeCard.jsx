@@ -96,15 +96,6 @@ const RecipeCard = ({ recipe, availableIngredients }) => {
                 <li key={index}>{step}</li>
               ))}
             </ol>
-
-            <div className="mt-4 flex space-x-3">
-              <button className="flex-1 bg-gradient-to-r from-orange-500 to-red-500 text-white py-2 rounded-lg font-medium hover:from-orange-600 hover:to-red-600 transition-all">
-                Simpan Resep
-              </button>
-              <button className="px-4 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-50 transition-colors">
-                Print
-              </button>
-            </div>
           </div>
         )}
       </div>

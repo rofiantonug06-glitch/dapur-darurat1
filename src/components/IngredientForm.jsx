@@ -4,15 +4,6 @@ const IngredientForm = ({ onAddIngredient }) => {
   const [ingredient, setIngredient] = useState('');
   const [category, setCategory] = useState('sayuran');
 
-  // Format tanggal menjadi lebih singkat
-  const formatDate = () => {
-    const now = new Date();
-    const day = now.getDate().toString().padStart(2, '0');
-    const month = (now.getMonth() + 1).toString().padStart(2, '0');
-    const year = now.getFullYear();
-    return `${day}/${month}/${year}`;
-  };
-
   const commonIngredients = {
     sayuran: ['Wortel', 'Kentang', 'Bawang Merah', 'Bawang Putih', 'Tomat', 'Cabe', 'Kol', 'Brokoli', 'Timun', 'Tomat'],
     daging: ['Ayam', 'Daging Sapi', 'Telur', 'Ikan', 'Udang', 'Sosis', 'Daging Ayam'],
@@ -27,7 +18,6 @@ const IngredientForm = ({ onAddIngredient }) => {
         id: Date.now(),
         name: ingredient.trim(),
         category: category,
-        dateAdded: formatDate() // Gunakan format yang konsisten
       });
       setIngredient('');
     }
